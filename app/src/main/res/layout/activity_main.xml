@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/d"
+    tools:context="aryan.browser.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <WebView
+            android:id="@+id/webView"
+            android:background="@drawable/c"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </WebView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/r1">
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:hint="website.com"
+                android:layout_toLeftOf="@+id/button"
+                android:layout_toStartOf="@+id/button"
+                android:inputType="text"
+                android:text=""/>
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:id="@+id/button"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="GO"
+                android:onClick="go"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/r2"
+            android:layout_below="@+id/r1">
+
+            <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/gridview"
+                android:background="@drawable/d"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="90dp"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                />
+
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:layout_width="123dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_name"
+                android:id="@+id/forward"
+                android:onClick="forward"
+                android:text="forward"/>
+
+            <ImageButton
+                android:layout_width="123dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_search"
+                android:id="@+id/search"
+                android:onClick="search"
+                android:text="search"/>
+
+            <ImageButton
+                android:layout_width="123dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_home"
+                android:id="@+id/home"
+                android:onClick="home"
+                android:text="home"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
